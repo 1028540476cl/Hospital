@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="cl.hospital.main">
+	<class name="Revert" table="t_revert" >
+		<id name="rid" >
+			<generator class="native" />          <!-- 设置主键id，自增 -->
+		</id>
+		<property name="rname"  length="20"/>
+		<property name="contert" />
+		<property name="revertTime" length="50"/>
+		 <one-to-one name="message" property-ref="revert" />
+		
+	</class>            
+</hibernate-mapping>

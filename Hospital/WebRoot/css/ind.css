@@ -1,0 +1,171 @@
+td,input,option {
+	font-family: "新宋体";
+	font-size: 11pt;
+	line-height: normal
+}
+.text {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 3em;
+	display: compact;
+	word-spacing: 2em;	
+	
+}
+.STYLE4 {font-size: 18pt}
+.xc {
+	font-family: "宋体";
+	font-size: 12pt;
+	line-height: 2em;
+	text-indent: 2em;
+}
+a:link {
+color:#000000;
+font-size: 12pt;	
+text-decoration:none;
+}
+a:visited {
+color:#000000;
+text-decoration:none;
+}
+a:hover {
+color:#FF0000;
+text-decoration:underline;
+}
+a:active {
+color:#000000;
+text-decoration:none;
+} 
+div, ul, p{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    font-family: inherit;
+}
+.errorClass { color: #f40000; font-size: 12pt;  }
+
+/* Nav
+==========================================================*/
+.nav {
+width:1003px;
+    position: relative;
+	margin:0px auto;
+    background: url(../images/fang_.gif)
+}
+.navinner {
+    background: url(../images/fang_.gif)
+}
+.navlist {
+    height: 29px;
+    line-height: 29px;
+    overflow: hidden;
+    margin: 0 11px;
+    
+}
+.nav li {
+    float: left;
+    display: inline;
+    margin: 0 0 0 -2px;
+    padding: 0 4px 0 6px;
+   
+}
+.nav a {
+    display: block;
+    width: 101px;
+    text-align: center;
+    font-size: 110%;
+}
+.nav a:link, .nav a:visited {
+    color: #fff;
+}
+.nav a.current, .nav a:hover, .nav a:active {
+    color: #fff;
+    font-weight: bold;
+   
+}
+.subnav {
+    position: absolute;
+    
+    left: 0;
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    white-space: nowrap;
+  
+}
+* html .subnav {
+    margin: 0 10px 0 -10px; /* IE 6 and below */
+}
+.subnav p {
+    padding: 0 345px;
+
+}
+.subnav p span {
+    display: block;
+    
+}
+.subnav p.pointer {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 5px;
+    width: 11px;
+    padding: 0;
+    margin-left: 20px;
+    text-indent: -999em;
+    
+}
+.subnav a {
+    display: inline;
+    padding: 0;
+    font-size: 100%;
+}
+[class~="subnav"] a {
+    padding: 0 3px;
+}
+.subnav, .subnav a:link, .subnav a:visited {
+    color: #000000;
+}
+.subnav a:hover, .subnav a:active {
+    color: #235e99;
+}
+.subnav a:hover, .subnav a:active {
+    font-weight: normal;
+    background: none;
+}
+/* subnav position and pointer position */
+#subnav1 { left: 5px; }
+#subnav2 { left: 160px; }
+#subnav3 { left: 320px; }
+#subnav4 { left: 470px; }
+#subnav5 { left: 32%; }
+
+#subnav1 .pointer,
+#subnav2 .pointer,
+#subnav3 .pointer,
+#subnav4 .pointer { left: 30px; }
+#subnav5 .pointer { left: auto; right: 290px; }
+#subnav6 .pointer { left: auto; right: 180px; }
+#subnav7 .pointer { left: auto; right: 70px; }
+
+#subnav1, #subnav2, #subnav3, #subnav4 {
+    min-width: 110px;
+}
+#subnav5 { min-width: 200px; }
+#subnav6 { min-width: 240px;left:auto; right:180px; }
+#subnav7 { min-width: 130px; }
+
+
+/* Note
+==========================================================*/
+.note {
+    margin: 0 15px 10px;
+	color:#666666;
+}
+.note span{
+	float:right;
+}
+.disable {
+    display: none;
+}

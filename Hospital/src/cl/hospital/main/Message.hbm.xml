@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="cl.hospital.main">
+	<class name="Message" table="t_message" >
+		<id name="mid" >
+			<generator class="native" />          <!-- 设置主键id，自增 -->
+		</id>
+		<property name="muid" not-null="true" />
+		<property name="title" type="text"/>
+		<property name="contert" type="text" />
+		<property name="cretaTime" length="50"/>
+		<many-to-one name="user" column="muid"  insert="false" update="false"   lazy="false"  class="User"/>
+		 <many-to-one name="revert" lazy="false"  class="Revert" unique="true" cascade="all" />
+		
+	</class>            
+</hibernate-mapping>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.il8n.encoding" value="utf-8" />
+	<constant name="struts.custom.il8n.resources" value="globalMessages" />
+	
+	<package name="haha" namespace="/cl"  extends="struts-default">  
+        <interceptors>
+			<!-- 验证用户登录的拦截器 -->
+			<interceptor name="loginInterceptor" class="cl.hospital.action.UserLoginInterceptor"/>
+			<interceptor-stack name="defaultInterceptorStack">
+				<interceptor-ref name="loginInterceptor"/>
+    			<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+		 <!--会员注册 -->
+            <result name="reg">/jsp/customer_reg.jsp</result>
+             <!--医院概况 -->
+            <result name="hos">/jsp/default/hospital.jsp</result>
+            <!-- 招才纳贤 -->
+            <result name="re">/jsp/default/recruit.jsp</result>
+            <!--操作流程界面 -->
+            <result name="pro">/jsp/default/procedure.jsp</result>
+            <!--特色科室界面 -->
+            <result name="cha">/jsp/default/characteristic.jsp</result>
+        	<!-- 错误界面 -->
+			 <result name="error">/jsp/error.jsp</result>
+			 <!-- 没有登录 -->
+			 <result name="nologin">/jsp/nologin.jsp</result>
+        </global-results> 
+	<action name="department" class="departmentAction"><!-- 系统的action -->
+	<result name="listsuccess">/jsp/main.jsp</result>
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	</action>
+
+	<action name="user" class="UserAction"> <!-- 用户的action -->
+	<result name="doctorlist">/adminjsp/adminMain.jsp</result>
+	<result name="userlist">/jsp/main.jsp</result>
+	<result name="adminlist">/adminjsp/adminMain.jsp</result>
+	<result name="answer">/jsp/user/answer.jsp</result>
+	<result name="loginout" type="redirectAction" >department</result>
+	<result name="search">/jsp/user/searchlogin.jsp</result>
+	 <result name="saveerror">/jsp/customer_reg.jsp</result>
+	<result name="error">/jsp/customer_reg.jsp</result>
+	<result name="save" >/jsp/user/result.jsp</result>
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	</action>
+	
+	
+	
+	<action name="doctor" class="DoctorAction" ><!--医生的action -->
+	<result name="success">/jsp/doctor/dmain.jsp</result>
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	<result name="upTime" type="redirectAction">
+	 <param name="actionName">time</param></result>
+	</action>
+	
+	
+	<action name="time" class="TimeAction" method="upDoctorsuccess"><!--医生时间表的action -->
+	<result name="success">/jsp/doctor/finddoctor.jsp</result>
+	<result name="time">/jsp/order/order.jsp</result>
+	<result name="order">/jsp/order/ore.jsp</result>
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	 <interceptor-ref name="defaultInterceptorStack"></interceptor-ref>
+		</action>
+	
+	<action name="order" class="OrderAction"><!--医生时间表的action -->
+	<result name="order">/jsp/order/orderlist.jsp</result>
+	<result name="orderlist">/jsp/order/ore.jsp</result>
+	<result name="pay">/jsp/order/pay.jsp</result>
+	<result name="check">/jsp/order/checkorder.jsp</result>
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	 <interceptor-ref name="defaultInterceptorStack"></interceptor-ref>
+	</action>
+	
+	<action name="message" class="MessageAction"><!--留言板的action -->
+	<result name="success">/jsp/message/default.jsp</result>
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	 <interceptor-ref name="defaultInterceptorStack"></interceptor-ref>
+	</action>
+	
+	
+	<action name="revert" class="RevertAction"><!--回复板的action -->
+	<result name="success">/jsp/message/default.jsp</result>
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	 <interceptor-ref name="defaultInterceptorStack"></interceptor-ref>
+	</action>
+
+	<!--                =================后台action分界线===================                  -->
+	<action name="adminuser" class="UserAction">
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	<interceptor-ref name="defaultInterceptorStack"></interceptor-ref>
+	</action>
+	
+	<action name="admindepartment" class="departmentAction"><!--后台系统的action -->
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	<interceptor-ref name="defaultInterceptorStack"></interceptor-ref>
+	</action>
+	
+	
+	<action name="admindoctor" class="DoctorAction" ><!-- 后台管理医生的action -->
+	<result name="adminsuccess">/adminjsp/adminMain.jsp</result>
+	<interceptor-ref name="defaultInterceptorStack"></interceptor-ref>
+	</action>
+	</package>
+</struts>

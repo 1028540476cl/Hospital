@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cl.hospital.main">
+	<class name="Order" table="t_order"  >
+		<id name="oid">
+			<generator class="native"/>
+		</id>
+		<property name="tid" />
+		<property name="timeid" />
+		<property name="kesi"  length="50"/>
+		<property name="dname"  length="50"/>
+		<property name="otime" length="50"/>
+		<property name="oprice" />
+		<property name="oname"  length="50"/>
+		<property name="onumber" length="50"/>
+		<property name="ophone" length="20"/>
+		<many-to-one name="user" column="tid"  lazy="false" insert="false" update="false"  class="User"/>
+		<many-to-one name="time" column="timeid"  lazy="false" insert="false" update="false"  class="Time"/>
+	</class>
+</hibernate-mapping>

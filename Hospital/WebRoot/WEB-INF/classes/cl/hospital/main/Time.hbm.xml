@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="cl.hospital.main">
+	<class name="Time" table="time" >
+		<id name="timeid" >
+			<generator class="native" />          <!-- 设置主键id，自增 -->
+		</id>
+		<property name="timeo"  length="20"/>
+		<property name="timet" length="20"/>
+		<property name="timetr" length="20"/>
+		<property name="timef" length="20"/>
+		<property name="timefi" length="20"/>
+		<property name="times" length="20" />
+		<property name="timesi" length="20"/>
+		<property name="remark" length="20" />
+		<property name="number"/>
+	
+		<many-to-one name="doctor" column="doctorid"  class="Doctor" lazy="false"/>
+	</class>            
+</hibernate-mapping>

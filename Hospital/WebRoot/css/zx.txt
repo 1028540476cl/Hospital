@@ -1,0 +1,70 @@
+<p  class="xc" align="center">XX市第八人民医院<br />
+  <span class="xc">招聘专业技术人员启示<br />
+  因医院发展需要面向社会诚聘以下岗位人才：  </span>
+<table width="66%" height="400" border="1" cellpadding="1" cellspacing="0" align="center">
+  <tr align="center">
+    <td width="20%" class="xc">职位名称</td>
+    <td width="19%" class="xc">学历</td>
+    <td width="18%" class="xc">专业</td>
+    <td width="9%" class="xc">需求计划</td>
+    <td width="34%" class="xc">条件及要求</td>
+  </tr>
+  <tr align="center">
+    <td height="" class="xc">学科带头人</td>
+    <td class="xc">博士</td>
+    <td class="xc">临床医学或精神卫生、医学影像学、医学检验、药学（需具有临床药师培训合格证）</td>
+    <td class="xc">4</td>
+    <td>
+      <p><span class="xc">1．</span><span class="xc">具有五年以上二级甲等医院相关专业工作经历，有科主任工作经验者优</span></p>
+     <p> <span class="xc">2．</span><span class="xc">学科方向明确，技术特色突出，能独立开展科研工作，主持过市级以上科研项目，承担省级以上科研项目者优先。</span> </p>
+    <p><span class="xc"> 3.</span><span class="xc">年龄四十五岁以下，正高级职称可适当放宽</span></p></td>
+  </tr>
+  <tr align="center">
+    <td height="40" class="xc">临床医师</td>
+    <td class="xc">全日制硕士</td>
+    <td class="xc">临床医学或精神卫生</td>
+    <td class="xc">10</td>
+    <td class="xc">有执业医师证和工作经验者优先。</td>
+  </tr>
+  <tr align="center">
+    <td class="xc">药学</td>
+    <td class="xc">全日制硕士</td>
+    <td class="xc">临床药学（西药）、药物分析</td>
+    <td class="xc">15</td>
+    <td class="xc">有工作经验和执业证者优先</td>
+  </tr>
+  <tr align="center">
+    <td class="xc">检验</td>
+    <td class="xc">全日制硕士</td>
+    <td class="xc">医学检验学、临床检验诊断学、药学</td>
+    <td class="xc">5</td>
+    <td class="xc">有工作经验和执业证者优先</td>
+  </tr>
+ <tr align="center">
+    <td class="xc">临床医技各个专业</td>
+    <td class="xc">全日制本科及以上</td>
+    <td class="xc">临床医学、医学影像学</td>
+    <td class="xc">5</td>
+    <td class="xc">有工作经验和执业证者优先</td>
+  </tr>
+  <tr align="center">
+    <td class="xc">护理</td>
+    <td class="xc">全日制本科及以上</td>
+    <td class="xc">护理学</td>
+    <td class="xc">30</td>
+    <td class="xc">有工作经验和执业证者优先</td>
+  </tr>
+  <tr >
+    <td height="150" colspan="5" class="xc"><p>一、招聘待遇：<br />
+      （一）学科带头人除解决事业编制外，夫妻分居两地、配偶具有医院相关专业、配偶工作及子女就学医院将尽量安排；博士享有一次性安家费和科研经费（具体面议）。<br />
+      （二）其他人员<br />
+      凡符合条件并经试用考核合格者，医院统一按规定办理人事代理手续，入编手续按《XX市事业单位新进人员暂行办法》执行；工资及福利待遇按国家规定的事业单位工资标准及医院有关规定执行。<br />
+        凡应聘者，请将本人简历及相关资质、证件复印件送至或邮寄至XX人民医院人事科。（电子简历邮件名称和上传的简历附件名称请按姓名/专业/学历/学校的顺序填写,同时注明应聘岗位。）<br />
+        二、报名地点及联系方式<br />
+        地点：CX路交叉口南200米路东<br />
+        联系人：CL  XHR     邮编：363600<br />
+        联系电话：xxxxx-XXXXXXX      传真：xxxxx-XXXXXXX<br />
+        网址：http://www.JN533.com   邮箱: JN533@163.com</p>
+    <p align="right">二〇一六年三月</p></td>
+  </tr>
+</table>

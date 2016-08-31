@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/hospital"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="040677"></property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>cl/hospital/main/User.hbm.xml</value>
+				<value>cl/hospital/main/Department.hbm.xml</value>
+				<value>cl/hospital/main/doctor.hbm.xml</value>
+				<value>cl/hospital/main/Time.hbm.xml</value>
+				<value>cl/hospital/main/Order.hbm.xml</value>
+				<value>cl/hospital/main/Message.hbm.xml</value>
+				<value>cl/hospital/main/Revert.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="show_sql">false</prop>
+				<prop key="hibernate.jdbc.batch_size">20</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+	<bean id="userdao" class="cl.hospital.dao.UserDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 这个配置是UserAction的配置 -->
+	<bean id="UserAction" class="cl.hospital.action.UserAction" scope="prototype">
+		<property name="udao">
+			<ref bean="userdao" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="department" class="cl.hospital.dao.DepartmentDaoimpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 这个配置是DepartmentAction的配置 -->
+	<bean id="departmentAction" class="cl.hospital.action.DepartmentAction"
+		scope="prototype">
+		<property name="ddao">
+			<ref bean="department" />
+		</property>
+	</bean>
+
+	<bean id="doctordao" class="cl.hospital.dao.DoctorDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 这个配置是DoctorAction的配置 -->
+	<bean id="DoctorAction" class="cl.hospital.action.DoctorAction" scope="prototype">
+		<property name="dodao">
+			<ref bean="doctordao" />
+		</property>
+	</bean>
+	
+	
+	<bean id="timedao" class="cl.hospital.dao.TimeDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 这个配置是TimeAction的配置 -->
+	<bean id="TimeAction" class="cl.hospital.action.TimeAction" scope="prototype">
+		<property name="dtime">
+			<ref bean="timedao" />
+		</property>
+	</bean>
+	
+	
+	<bean id="orderdao" class="cl.hospital.dao.OrderDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 这个配置是TimeAction的配置 -->
+	<bean id="OrderAction" class="cl.hospital.action.OrderAction" scope="prototype">
+		<property name="dorder">
+		<ref bean="orderdao" />
+		
+		</property>
+	
+	</bean>
+	
+	
+	
+		<bean id="message" class="cl.hospital.dao.MessageDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 这个配置是MessageAction的配置 -->
+	<bean id="MessageAction" class="cl.hospital.action.MessageAction" scope="prototype">
+		<property name="mdao">
+		<ref bean="message" />
+		
+		</property>
+	</bean>
+	
+	
+	
+	
+	<bean id="revert" class="cl.hospital.dao.RevertDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 这个配置是RevertAction的配置 -->
+	<bean id="RevertAction" class="cl.hospital.action.RevertAction" scope="prototype">
+		<property name="redao">
+		<ref bean="revert" />
+		
+		</property>
+	</bean>
+	
+	
+	<!-- 配置Hibernate事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>

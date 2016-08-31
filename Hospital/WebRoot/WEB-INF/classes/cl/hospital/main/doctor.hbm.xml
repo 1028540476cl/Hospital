@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cl.hospital.main">
+	<class name="Doctor" table="doctor"  >
+		<id name="did">
+			<generator class="native"/>
+		</id>
+		<property name="typeid" not-null="true" length="100"/>
+		<property name="dname" not-null="true" length="100"/>
+		<property name="description" type="text"/>
+		<property name="post" type="text"/>
+		<property name="sex" />
+		<property name="picture" />
+		<many-to-one name="department" column="typeid"  insert="false" update="false" lazy="false" class="Department"/>
+	</class>
+</hibernate-mapping>
